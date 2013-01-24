@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="contactForm.js"></script>
+	<style type="text/css">
+	input#submit, span.required{
+	display:none;
+	}
+	input.highlight, textarea.highlight{
+		//border:1px solid #f00;
+		background-color:#cae7e6;
+	}
+	span.required.highlight{
+		display:inline;
+		font-size:0.9em;
+		font-style:italic;
+		color:#2bece5;
+	}
+	</style>
+</head>
+<body>				
+	<div class="page contact">
+	<a name="contact"></a>
+		<div class="content bottom_content_wrapper">
+			<form method="POST" name="contactform" action="sendForm.php">
+				<div>
+					<label for='name'>Name:</label><span class="required"></span>
+					<br />
+					<input class="required" type="text" name="name"  />
+				</div>
+				<div>
+					<label for='company'>Company:</label>
+					<br />
+					<input type="text" name="company" />
+				</div>
+				<div>
+				  <label for='phone'>Phone:</label>
+					<br />
+					<input type="text" name="phone" />
+				</div>
+				<div>
+					<label for='email'>Email:</label><span class="required"></span>
+					<br />
+					<input class="required" type="text" name="email" />
+				</div>    
+				<div>							
+					<label for='message'>Message:</label><span class="required"></span>
+					<br />
+					<textarea class="required" rows='10' cols='25' name="message" class="message"></textarea>
+				</div>
+				<div>							
+					<label for='norobot'>Please type this to show you are human: <span class="roboTest"></span></label><span class="required"></span>
+					<br />
+					<input  class="required" type="text" name="norobot" id="norobot" />
+				</div>
+				<input type="submit" value="Submit" id="submit" />
+				<br />
+			</form>
+	</div>		
+</body>
+</html>

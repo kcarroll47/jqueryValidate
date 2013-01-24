@@ -48,10 +48,6 @@ $(document).ready(function(){
 			$(thisInput).siblings("span.required").html(" *required").removeClass("highlight");
 		}
 	}
-
-	$("#submitBtn").click(function(){
-		$(".contact form").submit();
-	});
 });
 
 
